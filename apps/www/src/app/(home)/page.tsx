@@ -133,7 +133,7 @@ const Hero = () => {
           </div>
 
           {/* Desktop Separator Line - Spans full height of the row */}
-          <div className="hidden lg:block w-px border-l border-dotted border-border select-none" />
+          <div className="hidden lg:block w-px border-l border-solid border-border select-none" />
 
           {/* Right Column: Bed Image (Desktop) / Below Text (Mobile) */}
           <div className="flex-1 lg:max-w-[45%] flex items-center justify-center lg:justify-end order-first lg:order-last py-24 px-4 lg:pl-12">
@@ -156,7 +156,7 @@ const Hero = () => {
 
 const Footer = () => {
   return (
-    <footer className="py-12 text-center border-t border-dotted mt-auto">
+    <footer className="py-12 text-center border-t border-solid mt-auto">
       <div className="container mx-auto px-4 flex flex-col gap-2 text-sm text-muted-foreground">
         <p>Released under the MIT License</p>
         <p>Copyright © 2023-present Yam Borodetsky</p>
