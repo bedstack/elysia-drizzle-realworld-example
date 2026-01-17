@@ -7,7 +7,12 @@
     "dev": "next dev",
     "start": "next start",
     "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
-    "postinstall": "fumadocs-mdx"
+    "postinstall": "fumadocs-mdx",
+    "clean": "rimraf node_modules",
+    "typecheck": "tsc --noEmit",
+    "fix": "bun run --cwd ../.. fix",
+    "check": "bun run --cwd ../.. check",
+    "check:errors": "bun run --cwd ../.. check:errors",
   },
   "dependencies": {
     "fumadocs-core": "16.4.7",
