@@ -132,6 +132,9 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* Desktop Separator Line */}
+          <div className="hidden lg:block w-px self-stretch border-l border-dotted border-border mx-4" />
+
           {/* Right Column: Bed Image (Desktop) / Below Text (Mobile) */}
           <div className="flex-1 lg:max-w-[45%] flex items-center justify-center lg:justify-end order-first lg:order-last">
             <div className="relative w-full max-w-lg lg:max-w-none aspect-square lg:aspect-auto">

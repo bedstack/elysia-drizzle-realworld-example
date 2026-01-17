@@ -25,9 +25,9 @@
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
-
   --fd-primary: var(--primary);
   --fd-primary-foreground: var(--primary-foreground);
+  --fd-nav-height: 12rem !important;
 }
 
 .dark {
@@ -104,10 +104,10 @@
 #nd-nav,
 #nd-subnav {
   > div {
-    @apply border-dotted;
+    @apply border-dotted text-[15.5px];
 
     [data-active="true"] {
-      @apply font-medium text-primary;
+      @apply font-semibold text-primary;
     }
   }
 }
