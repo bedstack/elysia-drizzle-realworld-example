@@ -92,10 +92,10 @@
   &::selection {
     @apply bg-primary text-primary-foreground;
   }
-  
-	button:not(:disabled) {
-		@apply cursor-pointer;
-	}
+
+  button:not(:disabled) {
+    @apply cursor-pointer;
+  }
 }
 
 #nd-home-layout,
@@ -164,8 +164,6 @@
     @apply font-medium;
   }
 }
-
-
 
 @keyframes zzz {
   0% {

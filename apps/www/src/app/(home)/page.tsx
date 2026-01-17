@@ -1,7 +1,7 @@
 'use client';
 
-import { ArrowUpRight, BookOpen, Rocket } from 'lucide-react';
 import { SiGithub as GitHub } from '@icons-pack/react-simple-icons';
+import { ArrowUpRight, BookOpen, Rocket } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
