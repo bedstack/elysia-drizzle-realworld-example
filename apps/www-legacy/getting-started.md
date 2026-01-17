@@ -18,27 +18,27 @@ Getting started with this RealWorld project is as easy as installing a few prere
 1. **Clone and install dependencies**
 
   ```sh
-  $ gh repo clone yamcodes/bedstack
-  $ cd bedstack
-  $ bun i
+  gh repo clone yamcodes/bedstack
+  cd bedstack
+  bun i
   ```
 
 2. **Ensure Docker daemon is running and spin up the Postgres+Bun container**
 
 ```sh
-$ bun db
+bun db
 ```
 
 3. **Migrate the schema to the database**
 
 ```sh
-$ bun db:migrate
+bun db:migrate
 ```
 
 4. **Run the app**
 
 ```sh
-$ bun dev
+bun dev
 ```
 
 ## What's Next?
