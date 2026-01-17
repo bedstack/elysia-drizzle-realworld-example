@@ -28,6 +28,7 @@
   --fd-primary: var(--primary);
   --fd-primary-foreground: var(--primary-foreground);
   --fd-nav-height: 80px !important;
+  --fd-docs-header-height: 80px;
   --fd-docs-row-1: 80px;
 }
 
@@ -105,16 +106,23 @@
 #nd-nav,
 #nd-subnav {
   height: var(--fd-nav-height) !important;
+  z-index: 50;
 }
 
-#nd-nav nav,
-#nd-subnav nav,
-#nd-subnav > div {
+#nd-nav nav {
   height: var(--fd-nav-height) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
   @apply px-8 w-full max-w-(--fd-layout-width) mx-auto;
+}
+
+#nd-subnav nav,
+#nd-subnav > div {
+  height: var(--fd-nav-height) !important;
+  display: flex !important;
+  align-items: center !important;
+  @apply px-8 w-full max-w-(--fd-layout-width) mx-auto gap-4;
 }
 
 #nd-nav a,
@@ -129,8 +137,6 @@
 
 #nd-sidebar {
   @apply border-r border-dotted border-border;
-  top: var(--fd-nav-height) !important;
-  height: calc(100vh - var(--fd-nav-height)) !important;
 
   a {
     @apply py-1.5;
@@ -139,6 +145,11 @@
   p {
     @apply font-medium;
   }
+}
+
+#nd-subnav,
+#nd-nav {
+  @apply border-b border-dotted border-border;
 }
 
 @keyframes zzz {
