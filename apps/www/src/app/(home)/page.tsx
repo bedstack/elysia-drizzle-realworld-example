@@ -1,8 +1,8 @@
 'use client';
 
-import Link from 'next/link';
+import { ArrowUpRight, BookOpen, Github, Rocket } from 'lucide-react';
 import Image from 'next/image';
-import { ArrowUpRight, Github, BookOpen, Rocket } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HomePage() {
   return (
