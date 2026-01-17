@@ -25,23 +25,6 @@ export function baseOptions(): BaseLayoutProps {
         </div>
       ),
     },
-    links: [
-      {
-        text: 'Guide',
-        url: '/docs/what-is-bedstack',
-        active: 'nested-url',
-      },
-      {
-        text: 'RealWorld apps',
-        url: 'https://realworld-docs.netlify.app/',
-        external: true,
-      },
-      {
-        text: 'GitHub',
-        url: 'https://github.com/yamcodes/bedstack',
-        external: true,
-      },
-    ],
     themeSwitch: {
       mode: 'light-dark-system',
     },
