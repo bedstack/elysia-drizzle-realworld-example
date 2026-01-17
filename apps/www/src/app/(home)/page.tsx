@@ -45,7 +45,7 @@ const Hero = () => {
 
         <Link
           href="/docs/what-is-bedstack"
-          className="inline-flex overflow-hidden w-fit items-center gap-2 rounded-full border bg-background py-1 pr-3 pl-1 text-foreground text-sm leading-6 shadow-sm hover:bg-accent transition-colors"
+          className="inline-flex overflow-hidden w-fit items-center gap-2 rounded-full border bg-background py-1 pr-3 pl-1 text-foreground text-sm leading-6 shadow-sm hover:bg-accent transition-colors transition duration-150"
         >
           <span className="rounded-full bg-primary text-primary-foreground px-2 font-semibold text-[10px] uppercase tracking-wider">
             New
@@ -63,9 +63,8 @@ const Hero = () => {
           </span>
         </h1>
 
-        <p className="max-w-xl text-balance text-center text-muted-foreground md:max-w-2xl md:text-xl lg:text-2xl leading-normal font-medium">
-          Framework-agnostic, type-safe toolkit for building backend
-          applications with{' '}
+        <p className="max-w-xl text-balance text-center text-muted-foreground md:max-w-2xl md:text-xl lg:text-2xl leading-normal font-light">
+          An opinionated, typesafe backend stack built with{' '}
           <div className="relative inline-flex size-3 mx-1">
             <div className="bg-green-500 inline-block size-full rounded-full" />
             <div className="bg-green-500 absolute size-full animate-ping rounded-full opacity-75" />
@@ -110,7 +109,7 @@ const Footer = () => {
     <footer className="py-12 text-center border-t border-dotted mt-auto">
       <div className="container mx-auto px-4 flex flex-col gap-2 text-sm text-muted-foreground">
         <p>Released under the MIT License</p>
-        <p>Copyright © 2025-present Yam Borodetsky</p>
+        <p>Copyright © 2023-present Yam Borodetsky</p>
       </div>
     </footer>
   );
