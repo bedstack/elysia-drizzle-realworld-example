@@ -41,15 +41,12 @@ const Hero = () => {
               <ArrowUpRight className="size-4 opacity-50" />
             </Link>
 
-            <h1 className="max-w-3xl text-balance font-bold text-5xl leading-tight tracking-tighter! sm:text-6xl md:text-7xl">
-              The stack you don&apos;t want to{' '}
-              <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-blue-500 to-primary font-extrabold italic pr-1">
-                sleep on
-              </span>
+            <h1 className="max-w-3xl text-balance font-medium text-5xl leading-tight tracking-tighter! sm:text-6xl md:text-7xl">
+              The stack you don&apos;t want to sleep on
             </h1>
 
             <p className="max-w-xl text-balance text-muted-foreground md:max-w-2xl md:text-xl lg:text-2xl leading-normal font-light">
-              An opinionated, typesafe backend stack built with{' '}
+              Bedstack is an opinionated, typesafe backend stack built with{' '}
               <span className="inline-flex items-center gap-1.5 text-foreground">
                 <Image
                   src="/bun-press-kit/logo-square.png"
@@ -105,7 +102,7 @@ const Hero = () => {
           <div className="hidden lg:block w-px border-l border-solid border-border select-none" />
 
           {/* Right Column: Bed Image (Desktop) / Below Text (Mobile) */}
-          <div className="flex-1 lg:max-w-[45%] flex items-center justify-center order-first lg:order-last py-24 px-4 lg:pl-12">
+          <div className="flex-1 lg:max-w-[45%] flex items-center justify-center lg:order-last py-24 px-4 lg:pl-12">
             <div className="relative group flex items-center justify-center">
               <Image
                 src="/logo-mini.png"
