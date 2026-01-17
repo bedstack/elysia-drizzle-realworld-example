@@ -65,13 +65,39 @@ const Hero = () => {
 
         <p className="max-w-xl text-balance text-center text-muted-foreground md:max-w-2xl md:text-xl lg:text-2xl leading-normal font-light">
           An opinionated, typesafe backend stack built with{' '}
-          <div className="relative inline-flex size-3 mx-1">
-            <div className="bg-green-500 inline-block size-full rounded-full" />
-            <div className="bg-green-500 absolute size-full animate-ping rounded-full opacity-75" />
-          </div>{' '}
-          <span className="text-foreground"> Bun</span>,
-          <span className="text-foreground"> ElysiaJS</span>, and{' '}
-          <span className="text-foreground"> Drizzle</span>.
+          <span className="inline-flex items-center gap-1.5 text-foreground">
+            <Image
+              src="/bun-press-kit/icon.svg"
+              alt="Bun"
+              width={20}
+              height={20}
+              className="inline-block dark:invert"
+            />
+            Bun
+          </span>
+          ,{' '}
+          <span className="inline-flex items-center gap-1.5 text-foreground">
+            <Image
+              src="/elysiajs-logo.png"
+              alt="ElysiaJS"
+              width={20}
+              height={20}
+              className="inline-block"
+            />
+            ElysiaJS
+          </span>
+          , and{' '}
+          <span className="inline-flex items-center gap-1.5 text-foreground">
+            <Image
+              src="/drizzle-logo.png"
+              alt="Drizzle"
+              width={20}
+              height={20}
+              className="inline-block"
+            />
+            Drizzle
+          </span>
+          .
         </p>
 
         <div className="flex flex-wrap justify-center gap-4 pt-4">
