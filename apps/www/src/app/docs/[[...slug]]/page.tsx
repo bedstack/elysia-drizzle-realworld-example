@@ -1,10 +1,10 @@
+import { createRelativeLink } from 'fumadocs-ui/mdx';
 import {
   DocsBody,
   DocsDescription,
   DocsPage,
   DocsTitle,
-} from 'fumadocs-ui/layouts/docs/page';
-import { createRelativeLink } from 'fumadocs-ui/mdx';
+} from 'fumadocs-ui/page';
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { LLMCopyButton, ViewOptions } from '@/components/ai/page-actions';
