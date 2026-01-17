@@ -100,7 +100,7 @@ const Hero = () => {
                   height={20}
                   className="inline-block"
                 />
-                Drizzle
+                Drizzle ORM
               </span>
               .
             </p>
