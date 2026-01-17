@@ -40,7 +40,7 @@ const Hero = () => {
               <ArrowUpRight className="size-4 opacity-50" />
             </Link>
 
-            <h1 className="max-w-3xl text-balance font-bold text-5xl leading-tight tracking-tighter! sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="max-w-3xl text-balance font-bold text-5xl leading-tight tracking-tighter! sm:text-6xl md:text-7xl">
               The stack you don&apos;t want to{' '}
               <span className="bg-clip-text text-transparent bg-linear-to-r from-primary via-blue-500 to-primary font-extrabold italic pr-1">
                 sleep on
