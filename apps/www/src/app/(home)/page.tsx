@@ -27,27 +27,6 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row w-full items-stretch">
           {/* Left Column: Text Content */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 flex-1 lg:max-w-[55%] py-24 px-4 lg:pr-12 justify-center">
-            <div className="relative group">
-              <Image
-                src="/logo-mini.png"
-                alt="Bedstack Logo"
-                width={100}
-                height={100}
-                className="drop-shadow-xl transition-transform duration-500 group-hover:scale-110"
-              />
-              <div className="absolute -top-6 -right-4 pointer-events-none select-none">
-                <span className="animate-zzz-1 text-yellow-400 font-black text-2xl absolute opacity-0">
-                  Z
-                </span>
-                <span className="animate-zzz-2 text-yellow-400 font-black text-3xl absolute opacity-0">
-                  Z
-                </span>
-                <span className="animate-zzz-3 text-yellow-400 font-black text-4xl absolute opacity-0">
-                  Z
-                </span>
-              </div>
-            </div>
-
             <Link
               href="/docs/what-is-bedstack"
               className="inline-flex overflow-hidden w-fit items-center gap-2 rounded-full border bg-background py-1 pr-3 pl-1 text-foreground text-sm leading-6 shadow-sm hover:bg-accent transition-colors transition duration-150"
@@ -137,15 +116,26 @@ const Hero = () => {
 
           {/* Right Column: Bed Image (Desktop) / Below Text (Mobile) */}
           <div className="flex-1 lg:max-w-[45%] flex items-center justify-center lg:justify-end order-first lg:order-last py-24 px-4 lg:pl-12">
-            <div className="relative w-full max-w-lg lg:max-w-none aspect-square lg:aspect-auto">
+            <div className="relative w-full max-w-lg lg:max-w-none group">
               <Image
                 src="/logo-mini.png"
                 alt="Bed illustration"
-                width={320}
-                height={320}
-                className="object-contain drop-shadow-2xl"
+                width={400}
+                height={400}
+                className="drop-shadow-2xl transition-transform duration-500 group-hover:scale-105"
                 priority
               />
+              <div className="absolute -top-12 -right-8 pointer-events-none select-none">
+                <span className="animate-zzz-1 text-yellow-400 font-black text-4xl absolute opacity-0">
+                  Z
+                </span>
+                <span className="animate-zzz-2 text-yellow-400 font-black text-5xl absolute opacity-0">
+                  Z
+                </span>
+                <span className="animate-zzz-3 text-yellow-400 font-black text-6xl absolute opacity-0">
+                  Z
+                </span>
+              </div>
             </div>
           </div>
         </div>
