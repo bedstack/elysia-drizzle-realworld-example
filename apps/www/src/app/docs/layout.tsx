@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       tree={source.pageTree}
       {...options}
       sidebar={{ collapsible: false }}
-      nav={{ ...options.nav, mode: 'top' as any }}
+      nav={{ ...options.nav, mode: 'top' }}
       containerProps={{
         className: 'max-w-[1400px] mx-auto w-full',
       }}

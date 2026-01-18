@@ -13,8 +13,8 @@ export default function Layout({ children }: { children: ReactNode }) {
           active: 'nested-url',
         },
         {
-          text: 'RealWorld apps',
-          url: 'https://realworld-docs.netlify.app/',
+          text: 'Starter Template',
+          url: 'https://github.com/yamcodes/bedstack-start',
           external: true,
         },
       ]}
