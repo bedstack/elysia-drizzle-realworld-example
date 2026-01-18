@@ -89,7 +89,7 @@
     overflow-x: hidden;
   }
 
-  &::selection {
+  ::selection {
     @apply bg-primary text-primary-foreground;
   }
 

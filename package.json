@@ -9,7 +9,7 @@
     "dev": "turbo run dev --ui tui",
     "typecheck": "turbo run typecheck",
     "docs": "turbo run dev --filter=www",
-    "docs:build": "turbo run build --filter=www",
+    "docs:build": "turbo run build --filter=www-legacy",
     "www": "turbo run dev --filter=www",
     "fix": "node bin/fix.js",
     "fix:unsafe": "node bin/fix.js --unsafe",

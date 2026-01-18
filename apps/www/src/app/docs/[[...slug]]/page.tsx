@@ -5,7 +5,7 @@ import {
   DocsPage,
   DocsTitle,
 } from 'fumadocs-ui/page';
-import type { Metadata } from 'next';
+import type { Metadata, PageProps } from 'next';
 import { notFound } from 'next/navigation';
 import { LLMCopyButton, ViewOptions } from '@/components/ai/page-actions';
 import { getPageImage, source } from '@/lib/source';
@@ -18,8 +18,8 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
 
   const MDX = page.data.body;
   const gitConfig = {
-    user: 'username',
-    repo: 'repo',
+    user: 'yamcodes',
+    repo: 'bedstack',
     branch: 'main',
   };
 
@@ -34,7 +34,7 @@ export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
         <ViewOptions
           markdownUrl={`${page.url}.mdx`}
           // update it to match your repo
-          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/docs/content/docs/${page.path}`}
+          githubUrl={`https://github.com/${gitConfig.user}/${gitConfig.repo}/blob/${gitConfig.branch}/apps/www/content/docs/${page.path}`}
         />
       </div>
       <DocsBody>

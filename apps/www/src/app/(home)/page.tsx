@@ -30,7 +30,7 @@ const Hero = () => {
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 flex-1 lg:max-w-[55%] py-24 px-4 lg:pr-12 justify-center">
             <Link
               href="/docs"
-              className="inline-flex overflow-hidden w-fit items-center gap-2 rounded-full border bg-background py-1 pr-3 pl-1 text-foreground text-sm leading-6 shadow-sm hover:bg-accent transition-colors transition duration-150"
+              className="inline-flex overflow-hidden w-fit items-center gap-2 rounded-full border bg-background py-1 pr-3 pl-1 text-foreground text-sm leading-6 shadow-sm hover:bg-accent transition-colors duration-150"
             >
               <span className="rounded-full bg-accent text-primary px-2 text-sm ml-1">
                 New

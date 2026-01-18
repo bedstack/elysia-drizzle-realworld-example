@@ -1,4 +1,4 @@
-# .
+# Bedstack Docs
 
 This is a Next.js application generated with
 [Create Fumadocs](https://github.com/fuma-nama/fumadocs).
@@ -13,14 +13,14 @@ pnpm dev
 yarn dev
 ```
 
-Open http://localhost:3000 with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Explore
 
 In the project, you can see:
 
-- `lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+- `src/lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
+- `src/lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
 
 | Route                     | Description                                            |
 | ------------------------- | ------------------------------------------------------ |

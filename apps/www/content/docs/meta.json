@@ -1,6 +1,7 @@
 {
   "title": "Docs",
   "pages": [
+    "[← Back to home](/)",
     "---Introduction---",
     "index",
     "what-is-bedstack",

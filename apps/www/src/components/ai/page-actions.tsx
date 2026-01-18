@@ -13,7 +13,7 @@ import {
   ExternalLinkIcon,
   MessageCircleIcon,
 } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { cn } from '@/lib/cn';
 
 const cache = new Map<string, string>();
@@ -37,6 +37,9 @@ export function LLMCopyButton({
       await navigator.clipboard.write([
         new ClipboardItem({
           'text/plain': fetch(markdownUrl).then(async (res) => {
+            if (!res.ok) {
+              throw new Error(`Failed to fetch markdown: ${res.statusText}`);
+            }
             const content = await res.text();
             cache.set(markdownUrl, content);
 
@@ -44,6 +47,9 @@ export function LLMCopyButton({
           }),
         }),
       ]);
+    } catch (err) {
+      console.error(err);
+      setLoading(false);
     } finally {
       setLoading(false);
     }
@@ -82,11 +88,16 @@ export function ViewOptions({
    */
   githubUrl: string;
 }) {
+  const [origin, setOrigin] = useState<string | null>(null);
+
+  useEffect(() => {
+    setOrigin(window.location.origin);
+  }, []);
+
   const items = useMemo(() => {
-    const fullMarkdownUrl =
-      typeof window !== 'undefined'
-        ? new URL(markdownUrl, window.location.origin)
-        : 'loading';
+    if (!origin) return [];
+
+    const fullMarkdownUrl = new URL(markdownUrl, origin);
     const q = `Read ${fullMarkdownUrl}, I want to ask questions about it.`;
 
     return [
@@ -207,7 +218,7 @@ export function ViewOptions({
         icon: <MessageCircleIcon />,
       },
     ];
-  }, [githubUrl, markdownUrl]);
+  }, [githubUrl, markdownUrl, origin]);
 
   return (
     <Popover>

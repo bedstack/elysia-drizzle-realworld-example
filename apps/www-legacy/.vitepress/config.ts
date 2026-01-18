@@ -34,7 +34,7 @@ export default defineConfig({
             text: 'What is Bedstack?',
             link: '/what-is-bedstack',
           },
-          { text: 'Getting Started', link: '/realworld' },
+          { text: 'Getting Started', link: '/getting-started' },
         ],
         collapsed: false,
       },
