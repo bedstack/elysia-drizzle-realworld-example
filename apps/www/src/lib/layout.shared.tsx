@@ -33,12 +33,12 @@ export function baseOptions(options?: {
           </div>
           {options?.titleSuffix && (
             <div className="flex items-center">
-              <span className="text-muted-foreground/40 text-2xl font-extralight select-none leading-none -translate-y-0.5 mx-1">
+              <span className="text-muted-foreground/50 text-2xl font-extralight select-none leading-none -translate-y-0.5 ml-1.5 mr-1">
                 /
               </span>
               <SafeNavLink
                 href={options.titleHref ?? '/'}
-                className="font-normal text-muted-foreground text-lg hover:text-foreground transition-colors"
+                className="font-normal text-lg hover:text-foreground transition-colors"
               >
                 {options.titleSuffix}
               </SafeNavLink>
