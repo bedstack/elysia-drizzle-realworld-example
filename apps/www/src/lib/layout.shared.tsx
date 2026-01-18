@@ -1,7 +1,7 @@
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import Image from 'next/image';
 
-import Link from 'next/link';
+import { SafeNavLink } from '@/components/safe-nav-link';
 
 export function baseOptions(options?: {
   titleSuffix?: string;
@@ -12,10 +12,7 @@ export function baseOptions(options?: {
       transparentMode: 'top',
       title: (
         <div className="flex items-center">
-          <Link
-            href="/"
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
-          >
+          <div className="flex items-center gap-2">
             <Image
               src="/logo-mini.png"
               alt="Bedstack"
@@ -33,18 +30,18 @@ export function baseOptions(options?: {
               unoptimized
             />
             <span className="font-medium text-lg">Bedstack</span>
-          </Link>
+          </div>
           {options?.titleSuffix && (
             <div className="flex items-center">
-              <span className="text-muted-foreground/20 text-2xl font-extralight select-none leading-none -translate-y-0.5 -mx-0.5">
+              <span className="text-muted-foreground/40 text-2xl font-extralight select-none leading-none -translate-y-0.5 mx-1">
                 /
               </span>
-              <Link
+              <SafeNavLink
                 href={options.titleHref ?? '/'}
                 className="font-normal text-muted-foreground text-lg hover:text-foreground transition-colors"
               >
                 {options.titleSuffix}
-              </Link>
+              </SafeNavLink>
             </div>
           )}
         </div>
