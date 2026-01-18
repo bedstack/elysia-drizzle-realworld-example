@@ -219,9 +219,9 @@ kbd {
 
 /* Link underlines in documentation */
 article
-  a:not(:has(img)):not(.fd-card):not([data-card]):not([class*="fd-"]):not(
-    [data-no-underline]
-  ),
+a:not(:has(img)):not(.fd-card):not([data-card]):not([class*="fd-"]):not(
+  [data-no-underline]
+),
 [data-external-link]:not(:has(img)):not(.fd-card):not([data-card]):not(
     [class*="fd-"]
   ):not([data-no-underline]) {
@@ -243,9 +243,9 @@ article
 
 /* External links in documentation */
 article
-  a[rel*="noopener"][target="_blank"]:not(.fd-card):not([data-card]):not(
-    [data-no-arrow]
-  ):not(:has(img)),
+a[rel*="noopener"][target="_blank"]:not(.fd-card):not([data-card]):not(
+  [data-no-arrow]
+):not(:has(img)),
 [data-external-link]:not(.fd-card):not([data-card]):not([data-no-arrow]):not(
     :has(img)
   ) {
