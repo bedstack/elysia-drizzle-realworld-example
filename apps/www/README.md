@@ -1,45 +1,85 @@
-# Bedstack Docs
+<div align='center'>
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+<img src="public/logo-mini.png" alt="Bedstack Logo" width=200>
+<h1>Bedstack Documentation Site</h1>
 
-Run development server:
+[![Next.js](https://img.shields.io/badge/Next.js-000000?logo=next.js&logoColor=white)](https://nextjs.org/) [![Fumadocs](https://img.shields.io/badge/Fumadocs-000000?logo=markdown&logoColor=white)](https://fumadocs.dev/) [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/) [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
+The official documentation site for [Bedstack](https://bedstack.vercel.app)
+
+[bedstack.vercel.app](https://bedstack.vercel.app)
+
+</div>
+
+<br/>
+<br/>
+
+## Overview
+
+This is the documentation site for Bedstack, built with [Next.js](https://nextjs.org/) and [Fumadocs](https://fumadocs.dev/). It provides comprehensive documentation, guides, and examples for Bedstack.
+
+## Quickstart
+
+1. **Install dependencies**
+
+   ```sh
+   bun i
+   ```
+
+2. **Run the development server**
+
+   ```sh
+   bun dev
+   ```
+
+3. **Open your browser**
+
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the documentation site.
+
+## Project Structure
+
+| Route                     | Description                                           |
+| ------------------------- | ----------------------------------------------------- |
+| `app/(home)`              | The route group for the landing page and other pages. |
+| `app/docs`                | The documentation layout and pages.                   |
+| `app/api/search/route.ts` | The Route Handler for search functionality.           |
+
+## Key Files
+
+- `src/lib/source.ts`: Content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
+- `src/lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+- `source.config.ts`: Configuration file for customizing options like frontmatter schema.
+
+## Development
+
+### Typechecking
+
+```sh
+bun run typecheck
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This runs Fumadocs MDX type generation, Next.js typegen, and TypeScript type checking.
 
-## Explore
+### Building for Production
 
-In the project, you can see:
+```sh
+bun run build
+```
 
-- `src/lib/source.ts`: Code for content source adapter, [`loader()`](https://fumadocs.dev/docs/headless/source-api) provides the interface to access your content.
-- `src/lib/layout.shared.tsx`: Shared options for layouts, optional but preferred to keep.
+### Starting Production Server
 
-| Route                     | Description                                            |
-| ------------------------- | ------------------------------------------------------ |
-| `app/(home)`              | The route group for your landing page and other pages. |
-| `app/docs`                | The documentation layout and pages.                    |
-| `app/api/search/route.ts` | The Route Handler for search.                          |
-
-### Fumadocs MDX
-
-A `source.config.ts` config file has been included, you can customise different options like frontmatter schema.
-
-Read the [Introduction](https://fumadocs.dev/docs/mdx) for further details.
+```sh
+bun start
+```
 
 ## Learn More
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
+To learn more about the technologies used:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.dev) - learn about Fumadocs
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API
+- [Fumadocs Documentation](https://fumadocs.dev) - Learn about Fumadocs and MDX
+- [Bedstack Documentation](https://bedstack.vercel.app) - Learn about Bedstack
+
+## Contributing
+
+Contributions to improve the documentation are welcome! Please see the main [Bedstack contributing guide](https://github.com/yamcodes/bedstack/blob/main/CONTRIBUTING.md) for details.
