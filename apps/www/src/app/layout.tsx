@@ -15,6 +15,10 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  title: {
+    template: '%s | Bedstack',
+    default: 'Bedstack | Bun + ElysiaJS + Drizzle',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
