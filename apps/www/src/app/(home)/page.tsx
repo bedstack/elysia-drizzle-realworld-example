@@ -104,7 +104,7 @@ const Hero = () => {
                 alt="Bed illustration"
                 width={301}
                 height={280}
-                className="transition-transform duration-500 group-hover:scale-105"
+                className=""
                 priority
                 unoptimized
               />

@@ -164,8 +164,8 @@ kbd {
   background: transparent !important;
 }
 
-#nd-nav a,
-#nd-subnav a {
+#nd-nav a:not(:has(svg:only-child)),
+#nd-subnav a:not(:has(svg:only-child)) {
   @apply text-[15.5px] px-4 whitespace-nowrap;
 }
 
