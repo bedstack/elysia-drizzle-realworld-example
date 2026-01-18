@@ -35,7 +35,7 @@ const Hero = () => {
               <span className="rounded-full bg-accent text-primary px-2 text-sm ml-1">
                 New
               </span>
-              <span className="truncate">Docs powered by Fumadocs</span>
+              <span className="truncate">Docs redesigned</span>
               <ArrowRight className="size-4 opacity-50" />
             </Link>
 
