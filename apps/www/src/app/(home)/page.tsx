@@ -27,7 +27,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto max-w-7xl flex flex-1">
         <div className="flex flex-col lg:flex-row w-full items-stretch">
           {/* Left Column: Text Content */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 flex-1 lg:max-w-[55%] py-24 px-4 lg:pr-12 justify-center">
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 flex-1 lg:max-w-[55%] py-12 px-4 lg:pr-12 justify-center">
             <Link
               href="/docs"
               className="inline-flex overflow-hidden w-fit items-center gap-2 rounded-full border bg-background py-1 pr-3 pl-1 text-foreground text-sm leading-6 shadow-sm hover:bg-accent transition-colors duration-150"
