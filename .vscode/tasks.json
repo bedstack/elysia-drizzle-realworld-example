@@ -11,10 +11,10 @@
     },
     {
       "type": "bun",
-      "script": "node bin/fix.js",
+      "script": "bin/fix.js",
       "problemMatcher": ["$tsc"],
       "label": "bun: fix",
-      "detail": "bun run node bin/fix.js - package.json"
+      "detail": "bun run bin/fix.js - package.json"
     }
   ]
 }
