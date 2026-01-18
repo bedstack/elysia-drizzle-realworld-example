@@ -141,7 +141,6 @@ kbd {
 #nd-nav > div,
 #nd-subnav > div {
   @apply backdrop-blur-lg bg-fd-background/80;
-  background-color: hsl(var(--background) / 0.8) !important;
 }
 
 #nd-nav nav {
