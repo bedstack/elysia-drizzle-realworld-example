@@ -4,6 +4,15 @@
     "---Introduction---",
     "index",
     "what-is-bedstack",
+    "installation",
+    "quickstart",
+    "---Concepts---",
+    "project-structure",
+    "validation",
+    "database",
+    "authentication",
+    "error-handling",
+    "testing",
     "---RealWorld example app---",
     "realworld"
   ]

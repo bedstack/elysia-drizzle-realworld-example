@@ -1,50 +1,45 @@
 ---
-title: Bedstack RealWorld
+title: RealWorld Example
 description: A full-featured, production-ready app built with Bedstack, following the RealWorld spec.
 ---
 
-[RealWorld](https://github.com/gothinkster/realworld) is "the mother of all demo apps" - a spec to build a clone of Medium.com using any combination of frontend and backend technologies. Bedstack implements this spec.
+[RealWorld](https://github.com/gothinkster/realworld) is "the mother of all demo apps" - a specification for building a blog engine (Medium.com clone) using any combination of frontend and backend technologies.
 
-## Installation
+Bedstack provides a first-class implementation of this spec in `apps/conduit`.
 
-### Prerequisites
+## Features
 
-- [Bun](https://bun.sh/) version 1.0.6 or higher.
-- Terminal for accessing Bun via its command-line interface (CLI).
-- Text Editor with TypeScript support.
-  - [Visual Studio Code](https://code.visualstudio.com/) is recommended for the best experience; other IDEs have been reported to cause issues with ElysiaJS's type inference system.
+The Bedstack implementation includes:
 
-### Setup
+- **Authentication**: JWT-based auth for users.
+- **Profiles**: Follow/unfollow users and view profile data.
+- **Articles**: Create, update, delete, and list articles with filtering (tag, author, favorited).
+- **Comments**: Add and remove comments from articles.
+- **Favorites**: Mark articles as favorites.
+- **Tags**: List all tags used in articles.
 
-1. **Clone and install dependencies**
+## API Specification
 
-   ```sh
-   gh repo clone yamcodes/bedstack
-   cd bedstack
-   bun i
-   ```
+Every endpoint in the `conduit` app is meticulously implemented to match the [RealWorld API specification](https://realworld-docs.netlify.app/specifications/backend/endpoints/).
 
-2. **Ensure Docker daemon is running and spin up the Postgres+Bun container**
+You can browse the interactive API documentation at [/swagger](http://localhost:3000/swagger) when running the app locally.
 
-   ```sh
-   bun db
-   ```
+## Getting Started
 
-3. **Migrate the schema to the database**
+To get the RealWorld app running locally, follow the **[Installation Guide](/docs/installation)**.
 
-   ```sh
-   bun db:migrate
-   ```
+Once installed, you can run the app with:
 
-4. **Run the app**
+```bash terminal
+bun run dev --filter=conduit
+```
 
-   ```sh
-   bun dev
-   ```
+## Testing for Compliance
 
-## What's Next?
+To ensure the implementation remains 100% compliant with the spec, we use the official API test suite.
 
-* To contribute, see the [contributing guide](https://github.com/yamcodes/bedstack/blob/main/CONTRIBUTING.md).
-* For a place to start, see the [good first issues](https://github.com/yamcodes/bedstack/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
-* For support, visit the [support page](https://github.com/yamcodes/bedstack/blob/main/SUPPORT.md).
-* To ask questions or chat, join the [GitHub Discussions](https://github.com/yamcodes/bedstack/discussions).
+```bash terminal
+bun run test:api
+```
+
+This runs a Newman/Postman collection containing hundreds of tests that validate every edge case of the specification.
