@@ -47,8 +47,7 @@ export const CreatePostDto = type({
 
 By using Elysia's native support for ArkType, validation happens automatically before your controller logic is ever executed.
 
-```typescript
-// src/posts/posts.controller.ts
+```typescript title="src/posts/posts.controller.ts"
 import { CreatePostDto } from './dto/create-post.dto';
 
 export const postsController = new Elysia({ prefix: '/posts' })

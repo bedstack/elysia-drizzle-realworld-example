@@ -9,8 +9,7 @@ In the Bedstack architecture, the database is encapsulated within the **Reposito
 
 Database tables are defined using Drizzle's `pgTable`. These definitions live within the `schema/` folder of each feature.
 
-```typescript
-// src/users/schema/users.schema.ts
+```typescript title="src/users/schema/users.schema.ts"
 import { pgTable, serial, text } from 'drizzle-orm/pg-core';
 
 export const users = pgTable('users', {
@@ -24,8 +23,7 @@ export const users = pgTable('users', {
 
 The Repository is the only layer allowed to import and use the Drizzle database instance and the schema definitions.
 
-```typescript
-// src/users/users.repository.ts
+```typescript title="src/users/users.repository.ts"
 import { db } from '@/core/database';
 import { users } from './schema/users.schema';
 import { eq } from 'drizzle-orm';

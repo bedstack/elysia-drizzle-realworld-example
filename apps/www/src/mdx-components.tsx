@@ -11,6 +11,7 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
 import { ExternalLink } from './components/ui/external-link';
+import { CodeBlock, Pre } from './components/codeblock';
 
 const generator = createGenerator({
   cache: createFileSystemGeneratorCache('.next/fumadocs-typescript'),
@@ -33,6 +34,11 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Tabs,
     AutoTypeTable: (props) => (
       <AutoTypeTable {...props} generator={generator} />
+    ),
+    pre: ({ ref: _ref, ...props }) => (
+      <CodeBlock {...props}>
+        <Pre>{props.children}</Pre>
+      </CodeBlock>
     ),
     ...components,
   };

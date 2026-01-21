@@ -9,8 +9,7 @@ A robust architecture requires a robust way to handle errors. Bedstack provides 
 
 Bedstack applications use a single entry point for all errors called the **Global Error Handler**. This is defined in your `app.module.ts`.
 
-```typescript
-// src/app.module.ts
+```typescript title="src/app.module.ts"
 export const app = new Elysia()
   .onError(({ error, code, set }) => {
     // 1. Handle Validation errors
@@ -33,8 +32,7 @@ export const app = new Elysia()
 
 In the **Service Layer**, you should throw domain-specific errors when business rules are violated.
 
-```typescript
-// src/shared/errors/domain.error.ts
+```typescript title="src/shared/errors/domain.error.ts"
 export class DomainError extends Error {
   constructor(public status: number, public message: string) {
     super(message);

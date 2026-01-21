@@ -12,8 +12,7 @@ Our architecture encourages testing at two primary levels:
 ### 1. Unit Testing (Service Layer)
 The Service Layer is the best place for unit tests because it contains your core business logic. Since services are isolated from the database (thanks to the Repository layer), you can easily mock repositories to test logic in isolation.
 
-```typescript
-// src/users/users.service.test.ts
+```typescript title="src/users/users.service.test.ts"
 import { describe, it, expect, mock } from 'bun:test';
 
 it('should prevent registration for banned domains', async () => {
