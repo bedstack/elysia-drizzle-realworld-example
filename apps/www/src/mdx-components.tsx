@@ -11,6 +11,7 @@ import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import type { MDXComponents } from 'mdx/types';
 import { CodeBlock, Pre } from './components/codeblock';
+import { Heading } from './components/heading';
 import { ExternalLink } from './components/ui/external-link';
 
 const generator = createGenerator({
@@ -21,7 +22,9 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
   return {
     ...defaultMdxComponents,
     a: ExternalLink,
-    img: (props) => <ImageZoom {...(props as any)} />,
+    img: (props) => (
+      <ImageZoom {...(props as React.ComponentProps<typeof ImageZoom>)} />
+    ),
     Step,
 
     Steps,
@@ -40,6 +43,12 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
         <Pre>{props.children}</Pre>
       </CodeBlock>
     ),
+    h1: (props) => <Heading as="h1" {...props} />,
+    h2: (props) => <Heading as="h2" {...props} />,
+    h3: (props) => <Heading as="h3" {...props} />,
+    h4: (props) => <Heading as="h4" {...props} />,
+    h5: (props) => <Heading as="h5" {...props} />,
+    h6: (props) => <Heading as="h6" {...props} />,
     ...components,
   };
 }
