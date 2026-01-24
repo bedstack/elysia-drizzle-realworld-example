@@ -3,13 +3,13 @@ import chalk from 'chalk';
 import { Elysia } from 'elysia';
 import { setupApp } from '@/app.module';
 
-console.info(chalk.gray('Starting Bedstack'));
+console.info(chalk.gray('Starting Conduit'));
 
 new Elysia()
   .use(setupApp)
   .get('/', ({ redirect }) => redirect('/swagger'))
   .listen(env.PORT, ({ hostname, port }) => {
     console.info(
-      `Bedstack is up and running on ${chalk.blue(`http://${hostname}:${port}`)}`,
+      `Conduit is up and running on ${chalk.blue(`http://${hostname}:${port}`)}`,
     );
   });

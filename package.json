@@ -1,8 +1,7 @@
 {
   "name": "@bedstack/elysia-drizzle-realworld-example",
-  "title": "Conduit (built with Bedstack)",
+  "description": "Backend for Conduit - Medium.com clone, built with Elysia + Drizzle",
   "version": "0.0.0",
-  "description": "RealWorld example app for Bun + ElysiaJS + Drizzle, the stack you don't want to sleep on",
   "module": "src/main.ts",
   "type": "module",
   "scripts": {
