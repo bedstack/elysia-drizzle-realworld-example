@@ -4,13 +4,9 @@ name: Tests
 
 on:
   pull_request:
-    paths-ignore:
-      - "apps/www/**"
   push:
     branches:
       - main
-    paths-ignore:
-      - "apps/www/**"
   workflow_dispatch:
 
 jobs:
@@ -47,7 +43,7 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          POSTGRES_DB: bedstack_test
+          POSTGRES_DB: conduit_test
         ports:
           - 5432:5432
         options: >-
@@ -61,8 +57,8 @@ jobs:
       POSTGRES_PORT: 5432
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: bedstack_test
-      DATABASE_URL: postgres://postgres:postgres@localhost:5432/bedstack_test
+      POSTGRES_DB: conduit_test
+      DATABASE_URL: postgres://postgres:postgres@localhost:5432/conduit_test
       JWT_SECRET: "test-secret"
       JWT_ALGORITHM: "HS256"
     steps:
@@ -85,10 +81,8 @@ jobs:
           bun run db:migrate
       - name: Wait for server
         run: |
-          # Start server in background via turbo
-          # We use --filter=conduit to only start the relevant app
-          # We use --ui stream to avoid TUI in CI
-          bun x turbo dev --filter=conduit --ui stream &
+          # Start server in background
+          bun run dev &
           timeout 30s bash -c 'until curl -s http://localhost:3000/api/health > /dev/null; do sleep 1; done'
       - name: Run API Tests
         run: bun run test:api
@@ -114,7 +108,5 @@ jobs:
           bun-version: ${{ matrix.bun }}
       - name: Install dependencies
         run: bun install
-      - name: Generate types
-        run: bun run typegen
       - name: Run typesafety tests
         run: bun run typecheck
