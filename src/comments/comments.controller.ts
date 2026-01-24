@@ -85,7 +85,7 @@ export const commentsController = new Elysia().use(setupComments).group(
             id: 'string.numeric.parse',
           }),
           response: {
-            [StatusCodes.NO_CONTENT]: type('undefined'),
+            [StatusCodes.NO_CONTENT]: type('null').describe('No content'),
           },
           detail: {
             summary: 'Delete Comment',

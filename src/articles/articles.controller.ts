@@ -174,7 +174,7 @@ export const articlesController = new Elysia().use(setupArticles).group(
         {
           beforeHandle: app.store.authService.requireLogin,
           response: {
-            [StatusCodes.NO_CONTENT]: type('undefined'),
+            [StatusCodes.NO_CONTENT]: type('null').describe('No content'),
           },
           detail: {
             summary: 'Delete Article',
