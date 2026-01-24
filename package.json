@@ -1,5 +1,6 @@
 {
   "name": "conduit-backend",
+  "title": "Conduit Backend",
   "description": "Backend for Conduit - Medium.com clone, built with Elysia + Drizzle",
   "version": "0.0.0",
   "module": "src/main.ts",
