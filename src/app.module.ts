@@ -72,7 +72,7 @@ export const setupApp = () => {
           },
         },
         exclude: {
-          paths: ['/'], 
+          paths: ['/'],
         },
         swagger: {
           persistAuthorization: true,
