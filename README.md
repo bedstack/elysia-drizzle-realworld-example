@@ -1,23 +1,29 @@
-<div align='center'>
+# ![RealWorld Example App](logo.png)
 
-<img src="logo.png" alt="Logo for Bedstack RealWorld example" width=200>
-<h1>Conduit - Bedstack RealWorld Example</h1>
+> ### Elysia + Drizzle codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld) spec and API.
+
+### [Docs](https://bedstack.js.org/)&nbsp;&nbsp;&nbsp;&nbsp;[RealWorld](https://github.com/gothinkster/realworld)
 
 [![Tests Status](https://github.com/bedstack/elysia-drizzle-realworld-example/actions/workflows/tests.yml/badge.svg?event=push&branch=main&)](https://github.com/bedstack/elysia-drizzle-realworld-example/actions/workflows/tests.yml?query=branch%3Amain+event%3Apush) [![License](https://custom-icon-badges.demolab.com/github/license/bedstack/elysia-drizzle-realworld-example?label=License&color=blue&logo=law&labelColor=0d1117)](https://github.com/bedstack/elysia-drizzle-realworld-example/blob/main/LICENSE) [![Bun](https://img.shields.io/badge/Bun-14151a?logo=bun&logoColor=fbf0df)](https://bun.com/) [![ElysiaJS](https://custom-icon-badges.demolab.com/badge/ElysiaJS-0f172b.svg?logo=elysia)](https://elysiajs.com/) [![Drizzle](https://img.shields.io/badge/Drizzle-C5F74F?logo=drizzle&logoColor=000)](https://drizzle.team/) [![Biome](https://img.shields.io/badge/Biome-24272f?logo=biome&logoColor=f6f6f9)](https://biomejs.dev/) [![Scalar](https://img.shields.io/badge/Scalar-080808?logo=scalar&logoColor=e7e7e7)](https://scalar.com/) [![Star](https://custom-icon-badges.demolab.com/github/stars/bedstack/elysia-drizzle-realworld-example?logo=star&logoColor=373737&label=Star)](https://github.com/bedstack/elysia-drizzle-realworld-example/stargazers/)
 
-[RealWorld](https://realworld-docs.netlify.app/) example app for [Bedstack](https://bedstack.js.org/)
-</div>
+This codebase was created to demonstrate a fully fledged backend application built with **[Elysia](https://elysiajs.com/)** and **[Drizzle ORM](https://orm.drizzle.team/)** including CRUD operations, authentication, routing, pagination, and more.
 
-<br/>
-<br/>
-<br/>
+We've gone to great lengths to adhere to the **Elysia** and **Drizzle** community styleguides & best practices.
 
-### [Read the docs](https://bedstack.js.org/)
+For more information on how this works with other frontends/backends, head over to the [RealWorld](https://github.com/gothinkster/realworld) repo.
 
-<br/>
-<br/>
+# How it works
 
-## Quickstart
+This is a [Bedstack](https://bedstack.js.org/) implementation - an architecture pattern for building modern TypeScript backends. The stack includes:
+
+- **[Bun](https://bun.sh/)** - Fast JavaScript runtime and package manager
+- **[Elysia](https://elysiajs.com/)** - Ergonomic web framework for Bun
+- **[Drizzle ORM](https://orm.drizzle.team/)** - TypeScript ORM with SQL-like syntax
+- **[PostgreSQL](https://www.postgresql.org/)** - Database
+- **[ArkType](https://arktype.io/)** - Runtime validation
+- **[Biome](https://biomejs.dev/)** - Linting and formatting
+
+# Getting started
 
 1. **Install dependencies**
 
@@ -62,8 +68,7 @@
    bun db:studio
    ```
 
-
-## Deploy to production
+# Deploy to production
 
 > [!TIP]
 > See more info in ElysiaJS's [Deploy to production](https://elysiajs.com/patterns/deploy) pattern.
@@ -80,17 +85,15 @@
    bun preview
    ```
 
-## Need help?
+# Need help?
 
 If you have questions or ideas:
 - Open a [GitHub Discussion](https://github.com/bedstack/elysia-drizzle-realworld-example/discussions)
 - Open an [Issue](https://github.com/bedstack/elysia-drizzle-realworld-example/issues) if you believe you found a bug
 
-## Supporting Bedstack
+# Contributors
 
-If you love Bedstack, you can support the project by **starring it on GitHub**!
-
-You are also welcome to [contribute to the project](https://github.com/bedstack/elysia-drizzle-realworld-example/blob/main/CONTRIBUTING.md) and join the wonderful people who have contributed:
+You are welcome to [contribute to the project](https://github.com/bedstack/elysia-drizzle-realworld-example/blob/main/CONTRIBUTING.md)!
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
