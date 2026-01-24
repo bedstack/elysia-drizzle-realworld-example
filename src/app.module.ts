@@ -1,4 +1,4 @@
-import { swagger } from '@elysiajs/swagger';
+import { openapi } from '@elysiajs/openapi';
 import { DrizzleQueryError } from 'drizzle-orm/errors';
 import { Elysia, NotFoundError, ValidationError } from 'elysia';
 import { pick } from 'radashi';
@@ -57,7 +57,7 @@ export const setupApp = () => {
       };
     })
     .use(
-      swagger({
+      openapi({
         documentation: {
           info: { title, version, description },
           components: {
@@ -71,11 +71,12 @@ export const setupApp = () => {
             },
           },
         },
-        exclude: ['/'],
-        swaggerOptions: {
+        exclude: {
+          paths: ['/'], 
+        },
+        swagger: {
           persistAuthorization: true,
         },
-        scalarVersion: '1.31.10',
       }),
     )
     .group('/api', (app) =>
