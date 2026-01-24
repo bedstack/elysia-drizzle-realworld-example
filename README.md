@@ -40,7 +40,7 @@ src/
 
 ## Technologies
 
-- **[ElysiaJS](https://elysiajs.com/)** - Web framework for Bun
+- **[ElysiaJS](https://elysiajs.com/)** - Web framework for HTTP
 - **[Drizzle ORM](https://orm.drizzle.team/)** - TypeScript ORM for PostgreSQL
 - **[ArkType](https://arktype.io/)** - Runtime validation
 - **[Scalar](https://scalar.com/)** - API documentation
