@@ -76,7 +76,7 @@ export const commentsController = new Elysia().use(setupComments).group(
             params.id,
             await store.authService.getUserIdFromHeader(request.headers),
           );
-          return status(StatusCodes.NO_CONTENT, undefined);
+          return status(StatusCodes.NO_CONTENT);
         },
         {
           beforeHandle: app.store.authService.requireLogin,
@@ -84,12 +84,14 @@ export const commentsController = new Elysia().use(setupComments).group(
             slug: 'string',
             id: 'string.numeric.parse',
           }),
-          response: {
-            [StatusCodes.NO_CONTENT]: type('undefined'),
-          },
           detail: {
             summary: 'Delete Comment',
             description: 'Authentication required',
+            responses: {
+              [StatusCodes.NO_CONTENT]: {
+                description: 'No content',
+              },
+            },
             security: [
               {
                 tokenAuth: [],

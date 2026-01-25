@@ -169,13 +169,10 @@ export const articlesController = new Elysia().use(setupArticles).group(
             params.slug,
             await store.authService.getUserIdFromHeader(request.headers),
           );
-          return status(StatusCodes.NO_CONTENT, undefined);
+          return status(StatusCodes.NO_CONTENT);
         },
         {
           beforeHandle: app.store.authService.requireLogin,
-          response: {
-            [StatusCodes.NO_CONTENT]: type('undefined'),
-          },
           detail: {
             summary: 'Delete Article',
             security: [
@@ -183,6 +180,11 @@ export const articlesController = new Elysia().use(setupArticles).group(
                 tokenAuth: [],
               },
             ],
+            responses: {
+              [StatusCodes.NO_CONTENT]: {
+                description: 'No content',
+              },
+            },
           },
         },
       )
