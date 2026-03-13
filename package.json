@@ -46,7 +46,7 @@
     "drizzle-orm": "0.45.1",
     "elysia": "1.4.27",
     "http-status-codes": "2.3.0",
-    "jose": "6.2.0",
+    "jose": "6.2.1",
     "postgres": "3.4.8",
     "radashi": "12.7.2"
   },
