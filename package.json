@@ -40,7 +40,7 @@
     "@elysiajs/jwt": "1.4.2",
     "@elysiajs/openapi": "1.4.15",
     "arkenv": "0.9.2",
-    "arkregex": "0.0.5",
+    "arkregex": "0.0.6",
     "arktype": "2.2.1",
     "chalk": "5.6.2",
     "drizzle-orm": "0.45.1",
