@@ -15,10 +15,10 @@ jobs:
       github.event_name == 'pull_request' ||
       (github.event_name == 'push' && github.event.sender.type != 'Bot' && github.event.head_commit != null)
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.3
 
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: latest
 

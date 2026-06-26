@@ -16,15 +16,15 @@ jobs:
       matrix:
         bun: ["1.3.2", "latest"]
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/cache@v5
+      - uses: actions/checkout@v6.0.3
+      - uses: actions/cache@v5.1.0
         with:
           path: ~/.bun/install/cache
           key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.bun }}-bun-
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: ${{ matrix.bun }}
       - name: Install dependencies
@@ -62,15 +62,15 @@ jobs:
       JWT_SECRET: "test-secret"
       JWT_ALGORITHM: "HS256"
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/cache@v5
+      - uses: actions/checkout@v6.0.3
+      - uses: actions/cache@v5.1.0
         with:
           path: ~/.bun/install/cache
           key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.bun }}-bun-
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: ${{ matrix.bun }}
       - name: Install dependencies
@@ -95,15 +95,15 @@ jobs:
       matrix:
         bun: ["1.3.2", "latest"]
     steps:
-      - uses: actions/checkout@v6
-      - uses: actions/cache@v5
+      - uses: actions/checkout@v6.0.3
+      - uses: actions/cache@v5.1.0
         with:
           path: ~/.bun/install/cache
           key: ${{ runner.os }}-${{ matrix.bun }}-bun-${{ hashFiles('**/bun.lock') }}
           restore-keys: |
             ${{ runner.os }}-${{ matrix.bun }}-bun-
       - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+        uses: oven-sh/setup-bun@v2.2.0
         with:
           bun-version: ${{ matrix.bun }}
       - name: Install dependencies
