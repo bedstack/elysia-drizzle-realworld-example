@@ -39,7 +39,7 @@
     "@elysiajs/bearer": "1.4.4",
     "@elysiajs/jwt": "1.4.2",
     "@elysiajs/openapi": "1.4.16",
-    "arkenv": "0.9.2",
+    "arkenv": "0.12.3",
     "arkregex": "0.0.5",
     "arktype": "2.2.3",
     "chalk": "5.6.2",
